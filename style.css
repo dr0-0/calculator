@@ -19,11 +19,12 @@ body {
     padding: 20px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     width: 100%;
-    max-width: 400px;
+    max-width: 320px;
 }
 
 .display {
     margin-bottom: 20px;
+    width: 100%;
 }
 
 #display {
@@ -49,11 +50,12 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
+    width: 100%;
 }
 
 .btn {
-    padding: 20px;
-    font-size: 1.5em;
+    padding: 18px 10px;
+    font-size: 1.4em;
     border: none;
     border-radius: 10px;
     background: #f0f0f0;
@@ -104,7 +106,6 @@ body {
 .btn-equals {
     background: #51cf66;
     color: white;
-    grid-column: span 1;
 }
 
 .btn-equals:hover {
