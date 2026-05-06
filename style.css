@@ -16,30 +16,33 @@ body {
 .calculator {
     background: white;
     border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     padding: 20px;
-    width: 320px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
 }
 
 .display {
-    background: #f0f0f0;
-    border-radius: 10px;
-    padding: 20px;
     margin-bottom: 20px;
 }
 
 #display {
     width: 100%;
-    font-size: 32px;
-    border: none;
-    background: transparent;
+    padding: 20px;
+    font-size: 2.5em;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
     text-align: right;
+    background: #f8f9fa;
+    cursor: default;
     font-weight: 500;
     color: #333;
 }
 
-#display::placeholder {
-    color: #999;
+#display:focus {
+    outline: none;
+    border-color: #667eea;
+    background: #f0f4ff;
 }
 
 .buttons {
@@ -50,82 +53,82 @@ body {
 
 .btn {
     padding: 20px;
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 1.5em;
     border: none;
     border-radius: 10px;
     background: #f0f0f0;
     color: #333;
     cursor: pointer;
+    font-weight: 600;
     transition: all 0.2s ease;
 }
 
 .btn:hover {
     background: #e0e0e0;
-    transform: scale(1.05);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .btn:active {
-    transform: scale(0.95);
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.btn.operator {
+.btn-operator {
     background: #667eea;
     color: white;
-    font-weight: 700;
 }
 
-.btn.operator:hover {
+.btn-operator:hover {
     background: #5568d3;
 }
 
-.btn.clear {
+.btn-clear {
     background: #ff6b6b;
     color: white;
-    font-weight: 700;
 }
 
-.btn.clear:hover {
+.btn-clear:hover {
     background: #ff5252;
 }
 
-.btn.delete {
-    background: #ffa502;
+.btn-delete {
+    background: #ffa94d;
     color: white;
-    font-weight: 700;
 }
 
-.btn.delete:hover {
-    background: #ff8c00;
+.btn-delete:hover {
+    background: #ff922b;
 }
 
-.btn.equals {
+.btn-equals {
     background: #51cf66;
     color: white;
-    font-weight: 700;
     grid-column: span 1;
 }
 
-.btn.equals:hover {
+.btn-equals:hover {
     background: #40c057;
 }
 
-.btn.zero {
+.btn-zero {
     grid-column: span 2;
 }
 
+/* Responsive Design */
 @media (max-width: 480px) {
     .calculator {
-        width: 100%;
-        max-width: 300px;
+        max-width: 100%;
+        margin: 10px;
     }
-
+    
+    #display {
+        font-size: 2em;
+        padding: 15px;
+    }
+    
     .btn {
         padding: 15px;
-        font-size: 16px;
-    }
-
-    #display {
-        font-size: 24px;
+        font-size: 1.2em;
     }
 }
